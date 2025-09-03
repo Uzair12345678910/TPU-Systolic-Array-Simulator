@@ -2,14 +2,14 @@
 
 A laptop-only, TPU-style **4×4 systolic array** for matrix multiply using signed 8-bit operands and 20-bit accumulators.  
 The core exposes a simple streaming interface: `start / in_valid / in_ready / done`.  
-Includes a performance testbench and VCD waveforms; runs with **Icarus Verilog**.
+Includes a performance testbench; runs with **Icarus Verilog**.
 
 ---
 
 ## Why this is interesting
 - **Systolic dataflow:** weight-stationary / edge-skewed streaming of operands.
 - **Hardware–software bridge:** exposes timing/throughput metrics you can compare to CPU baselines.
-- **No FPGA needed:** everything runs from a laptop (Icarus + GTKWave).
+- **No FPGA needed:** everything runs from a laptop (Icarus).
 
 ---
 
@@ -17,7 +17,6 @@ Includes a performance testbench and VCD waveforms; runs with **Icarus Verilog**
 
 ### Requirements
 - Icarus Verilog (`iverilog`, `vvp`)
-- (Optional) GTKWave for viewing `.vcd` waveforms
 
 ### Build & run
 ```bash
